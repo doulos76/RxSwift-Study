@@ -1,0 +1,9 @@
+diasbled_rules:
+- vertical_whitespace
+- trailing_newline
+- line_length
+- trailing_whitespace
+- vertical_whitespace
+included:
+excluded:
+- Pods
