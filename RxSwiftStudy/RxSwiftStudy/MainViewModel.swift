@@ -13,16 +13,16 @@ import RxRelay
 struct MainViewModel {
   let input = Input()
   let output = Output()
-  
+ 
   init(_ model: MainModel = MainModel()) {
     output.items.accept(model.models)
   }
-  
+
 }
 
 extension MainViewModel {
   struct Input {
-    
+
   }
 }
 

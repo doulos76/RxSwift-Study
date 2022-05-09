@@ -18,9 +18,9 @@ final class MainViewController: UIViewController {
   // MARK: - Properties
 
   let disposeBag = DisposeBag()
-  
+
   private lazy var tableView = UITableView().then {
-    $0.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
+    $0.register(MainCell.self, forCellReuseIdentifier: MainCell.identifier)
   }
 
   // MARK: - View Life Cycle
@@ -34,7 +34,10 @@ final class MainViewController: UIViewController {
   // MARK: - Setup Methods
 
   func bind(_ viewModel: MainViewModel) {
-    viewModel.output.items.bind(to: tableView.rx.items(cellIdentifier: String(describing: UITableViewCell.self), cellType: UITableViewCell.self)) { index, data, cell in
+    viewModel.output
+      .items
+      .bind(to: tableView.rx.items(cellIdentifier: MainCell.identifier, cellType: MainCell.self)
+    ) { index, data, cell in
       cell.textLabel?.text = data
     }
     .disposed(by: disposeBag)
