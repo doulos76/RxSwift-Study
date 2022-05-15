@@ -31,6 +31,8 @@ final class MainViewController: UIViewController {
     layoutUI()
   }
 
+  
+  
   // MARK: - Setup Methods
 
   func bind(_ viewModel: MainViewModel) {
