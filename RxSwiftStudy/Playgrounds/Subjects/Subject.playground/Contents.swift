@@ -39,3 +39,48 @@ publishSubject
 
 publishSubject.onNext("5. printed?")
 
+print("\n===============[ Behavior Subject ]===============\n")
+
+enum SubjectError: Error {
+  case anError
+}
+
+let behaviorSubject = BehaviorSubject<String>(value: "0. 초기값")
+behaviorSubject.onNext("1. 첫번째값")
+
+behaviorSubject.subscribe {
+  print("첫번째 구독", $0.element ?? $0)
+}
+
+//behaviorSubject.onError(SubjectError.anError)
+
+behaviorSubject.subscribe {
+  print("두번째 구독", $0.element ?? $0)
+}
+.disposed(by: disposeBag)
+
+let value = try? behaviorSubject.value()
+print(value)
+
+print("\n===============[ Replay Subject ]===============\n")
+
+let replaySubject = ReplaySubject<String>.create(bufferSize: 2)
+
+replaySubject.onNext("1. 여러분")
+replaySubject.onNext("2. 힘내세요")
+replaySubject.onNext("3. 어렵지만")
+
+replaySubject.subscribe {
+  print("첫번째 구독: ", $0.element ?? $0)
+}
+.disposed(by: disposeBag)
+
+replaySubject.onNext("4. 할수있어요.")
+
+replaySubject.onError(SubjectError.anError)
+replaySubject.dispose()
+
+replaySubject.subscribe {
+  print("세번째 구독: ", $0.element ?? $0)
+}
+.disposed(by: disposeBag)
