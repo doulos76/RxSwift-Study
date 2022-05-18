@@ -31,6 +31,7 @@
 		B91ECC6328320564003C7673 /* maybe.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = maybe.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B91ECC64283216DC003C7673 /* Completable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Completable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B996DF6128345F2000242F42 /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B996DF622834630200242F42 /* FilteringOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FilteringOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B99FD69C2831BFB0003D2B0C /* Observable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B9AD7CB328288BE300425E84 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		B9D3E5E32828872400D18A7A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		B99FD6972831BF6D003D2B0C /* Operators */ = {
 			isa = PBXGroup;
 			children = (
+				B996DF622834630200242F42 /* FilteringOperator.playground */,
 			);
 			path = Operators;
 			sourceTree = "<group>";
